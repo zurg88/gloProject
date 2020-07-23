@@ -12,8 +12,6 @@ const toggleClubMenu = () => {
 		} else {
 			clubSelectList.classList.remove('show-club-menu');
 		}
-
-		console.log(target);
 	});
 
 };
