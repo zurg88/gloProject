@@ -11,6 +11,7 @@ import 'fetch-polyfill';
 import toggleClubMenu from './modules/clubMenu';
 import showPopup from './modules/popup';
 import mainSlider from './modules/main-slider';
+import showBurgerMenu from './modules/burgerMenu';
 
 
 // Club menu
@@ -34,4 +35,8 @@ const sliderMain = document.querySelector('.main-slider');
 const sliderMainItems = sliderMain.querySelectorAll('.slide');
 
 mainSlider(sliderMain, sliderMainItems);
+
+// Burget menu
+
+showBurgerMenu();
 
