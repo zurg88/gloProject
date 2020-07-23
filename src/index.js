@@ -10,6 +10,7 @@ import 'fetch-polyfill';
 
 import toggleClubMenu from './modules/clubMenu';
 import showPopup from './modules/popup';
+import mainSlider from './modules/main-slider';
 
 
 // Club menu
@@ -26,4 +27,11 @@ const fixedGift = document.querySelector('.fixed-gift');
 showPopup(freeVisit, freeVisitPopup);
 showPopup(callbackBtn, callbackForm);
 showPopup(fixedGift, fixedGiftPopup, true);
+
+// Main slider
+
+const sliderMain = document.querySelector('.main-slider');
+const sliderMainItems = sliderMain.querySelectorAll('.slide');
+
+mainSlider(sliderMain, sliderMainItems);
 
