@@ -1,10 +1,14 @@
 const showPopup = (elem, popup, hiddenElement = false) => {
-	elem.addEventListener('click', () => {
-		popup.style.display = 'block';
-		if (hiddenElement === true) {
-			elem.style.opacity = "0";
-		}
-	});
+	try {
+		elem.addEventListener('click', () => {
+			popup.style.display = 'block';
+			if (hiddenElement === true) {
+				elem.style.opacity = "0";
+			}
+		});
+	} catch (error) {
+		return;
+	}
 
 	popup.addEventListener('click', event => {
 		const target = event.target;
