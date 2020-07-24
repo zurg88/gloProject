@@ -12,6 +12,7 @@ import toggleClubMenu from './modules/clubMenu';
 import showPopup from './modules/popup';
 import mainSlider from './modules/main-slider';
 import showBurgerMenu from './modules/burgerMenu';
+import sendFormData from './modules/form';
 
 
 // Club menu
@@ -39,4 +40,12 @@ mainSlider(sliderMain, sliderMainItems);
 // Burget menu
 
 showBurgerMenu();
+
+// Forms
+
+const bannerForm = document.getElementById('banner-form');
+
+sendFormData(bannerForm);
+
+
 
