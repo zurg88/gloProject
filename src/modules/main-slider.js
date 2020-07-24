@@ -1,7 +1,5 @@
 const mainSlider = (slider, slideItems) => {
 	let currentslide = 0;
-	console.log(slideItems.length);
-
 	const autoPlay = () => {
 		slideItems[currentslide].style.display = 'none';
 		currentslide++;
