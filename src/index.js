@@ -12,6 +12,7 @@ import toggleClubMenu from './modules/clubMenu';
 import showPopup from './modules/popup';
 import mainSlider from './modules/main-slider';
 import showBurgerMenu from './modules/burgerMenu';
+import formValidation from './modules/formValidation';
 import sendFormData from './modules/form';
 
 
@@ -43,9 +44,13 @@ showBurgerMenu();
 
 // Forms
 
+formValidation();
+
 const bannerForm = document.getElementById('banner-form');
+const form1 = document.getElementById('form1');
 
 sendFormData(bannerForm);
+sendFormData(form1);
 
 
 
