@@ -1,4 +1,6 @@
 const calculator = (form) => {
+	
+
 	const totalPrice = document.getElementById('price-total'),
 		radioCollection = form.querySelectorAll('input[name = card-type]'),
 		promo = form.querySelector('input[placeholder = Промокод]');
@@ -10,24 +12,28 @@ const calculator = (form) => {
 		12: 24990
 	};
 
-	const promoPrice = () => {
-		if (promo.value === 'ТЕЛО2019') {
-			totalPrice.textContent = Math.round(+totalPrice.textContent * 0.7);
-		}
-	};
-
-	form.addEventListener('change', () => {
-		radioCollection.forEach(item => {
-			if (item.checked) {
-				totalPrice.textContent = priceObj[item.value];
-				promoPrice();
+	try {
+		const promoPrice = () => {
+			if (promo.value === 'ТЕЛО2019') {
+				totalPrice.textContent = Math.round(+totalPrice.textContent * 0.7);
 			}
-		});
-	});
+		};
 
-	promo.addEventListener('input', () => {
-		promoPrice();
-	});
+		form.addEventListener('change', () => {
+			radioCollection.forEach(item => {
+				if (item.checked && totalPrice) {
+					totalPrice.textContent = priceObj[item.value];
+					promoPrice();
+				}
+			});
+		});
+
+		promo.addEventListener('input', () => {
+			promoPrice();
+		});
+	} catch (error) {
+		return;
+	}
 
 };
 
