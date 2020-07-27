@@ -18,8 +18,6 @@ const calculator = (form) => {
 
 	form.addEventListener('change', () => {
 		radioCollection.forEach(item => {
-			// console.log(priceObj[item.value]);
-			// console.log(item.checked);
 			if (item.checked) {
 				totalPrice.textContent = priceObj[item.value];
 				promoPrice();
