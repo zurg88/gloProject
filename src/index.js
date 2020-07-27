@@ -48,9 +48,15 @@ formValidation();
 
 const bannerForm = document.getElementById('banner-form');
 const form1 = document.getElementById('form1');
+const form2 = document.getElementById('form2');
+const form3 = document.getElementById('footer_form');
+const form4 = document.getElementById('card_order');
 
 sendFormData(bannerForm);
 sendFormData(form1);
+sendFormData(form2);
+sendFormData(form3);
+sendFormData(form4);
 
 
 

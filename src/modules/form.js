@@ -1,9 +1,10 @@
 
 const sendFormData = form => {
 	const thanksBlock = document.getElementById('thanks'),
+		thanksBlockText = thanksBlock.innerHTML,
 		formInputs = form.querySelectorAll('input'),
 		errorElement = document.createElement('p'),
-		personalData = document.querySelector('.personal-data'),
+		popupCollection = document.querySelectorAll('.popup'),
 		checkbox = form.querySelector('input[type = checkbox]');
 
 	errorElement.textContent = 'Необходимо согласиться на обработку ваших персональных данных';
@@ -15,17 +16,22 @@ const sendFormData = form => {
 		event.preventDefault();
 		const data = {};
 
-		if (!checkbox.checked) {
+		if (checkbox && !checkbox.checked) {
 			form.append(errorElement);
 			return;
 		}
+
 
 		if (form.contains(errorElement)) {
 			errorElement.remove();
 		}
 
 		formInputs.forEach(item => {
-			if (item.type !== 'checkbox') {
+			if (item.type !== 'checkbox' && item.type !== 'radio') {
+				data[item.name] = item.value;
+			}
+			if (item.type === 'radio' && item.checked) {
+				console.log(item.value);
 				data[item.name] = item.value;
 			}
 		});
@@ -35,15 +41,32 @@ const sendFormData = form => {
 				throw new Error('status network not 200');
 			}
 		}).then(outputData()).then(() => {
+			thanksBlock.innerHTML = thanksBlockText;
 			thanksBlock.style.display = 'block';
 			thanksBlock.addEventListener('click', event => {
 				const target = event.target;
 				if (target.closest('.overlay') || target.closest('.close_icon') || target.closest('.close-btn')) {
-					thanksBlock.style.display = 'none';
+					popupCollection.forEach(item => {
+						item.style.display = 'none';
+					});
 				}
 
 			});
 		}).catch(error => {
+			const errText = thanksBlock.querySelector('.form-content');
+			thanksBlock.style.display = 'block';
+			thanksBlock.style.color = 'red';
+			thanksBlock.style.fontSize = '3em';
+			errText.textContent = 'Произошла ошибка!';
+			thanksBlock.addEventListener('click', event => {
+				const target = event.target;
+				if (target.closest('.overlay') || target.closest('.close_icon') || target.closest('.close-btn')) {
+					popupCollection.forEach(item => {
+						item.style.display = 'none';
+					});
+				}
+
+			});
 			console.warn(error);
 		});
 
@@ -51,7 +74,7 @@ const sendFormData = form => {
 
 	const outputData = () => {
 		formInputs.forEach(elem => {
-			if (elem.type !== 'hidden') {
+			if (elem.type !== 'hidden' && elem.type !== 'radio') {
 				elem.value = '';
 			}
 		});
