@@ -31,7 +31,6 @@ const sendFormData = form => {
 				data[item.name] = item.value;
 			}
 			if (item.type === 'radio' && item.checked) {
-				console.log(item.value);
 				data[item.name] = item.value;
 			}
 		});

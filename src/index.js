@@ -13,6 +13,7 @@ import showPopup from './modules/popup';
 import mainSlider from './modules/main-slider';
 import showBurgerMenu from './modules/burgerMenu';
 import formValidation from './modules/formValidation';
+import calculator from './modules/calculator';
 import sendFormData from './modules/form';
 
 
@@ -57,6 +58,10 @@ sendFormData(form1);
 sendFormData(form2);
 sendFormData(form3);
 sendFormData(form4);
+
+// calculatot
+
+calculator(form4);
 
 
 
