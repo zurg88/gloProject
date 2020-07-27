@@ -1,3 +1,13 @@
 header .head .club-select .clubs-list .show-club-menu {
 	display: block;
 }
+
+.services-slider {
+	position: relative;
+	overflow: hidden;
+}
+
+.services-slider .slide {
+	padding: 0 30px;
+	width: auto;
+}
