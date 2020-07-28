@@ -6,21 +6,18 @@ const carousel = () => {
 
 	try {
 		prev.addEventListener('click', () => {
-			const cloneElem = slideContainer.firstChild.cloneNode(true);
+			const cloneElem = slideContainer.firstElementChild.cloneNode(true);
 			slideContainer.append(cloneElem);
-			slideContainer.firstChild.remove();
-			console.log(typeof(cloneElem));
-			console.log(cloneElem);
+			slideContainer.firstElementChild.remove();
 		});
 	} catch (error) {
 		return;
 	}
 
 	next.addEventListener('click', () => {
-		const cloneElem = slideContainer.lastChild.cloneNode(true);
+		const cloneElem = slideContainer.lastElementChild.cloneNode(true);
 		slideContainer.prepend(cloneElem);
-		slideContainer.lastChild.remove();
-		console.log(cloneElem);
+		slideContainer.lastElementChild.remove();
 	});
 };
 
