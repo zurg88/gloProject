@@ -11,3 +11,11 @@ header .head .club-select .clubs-list .show-club-menu {
 	padding: 0 30px;
 	width: auto;
 }
+
+.slide-container {
+	display: flex;
+    margin: 0 auto;
+    padding-left: 15px;
+	padding-right: 15px;
+	overflow: hidden;
+}
