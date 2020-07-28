@@ -20,9 +20,8 @@ const calculator = (form) => {
 		12: 24990
 	};
 
-	totalPrice.textContent = mozaika[1];
-
 	try {
+		totalPrice.textContent = mozaika[1];
 		const promoPrice = () => {
 			if (promo.value === 'ТЕЛО2019') {
 				totalPrice.textContent = Math.round(+totalPrice.textContent * 0.7);
