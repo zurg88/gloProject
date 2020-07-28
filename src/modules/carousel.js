@@ -7,23 +7,27 @@ const carousel = () => {
 
 	servicesSlider.style.width = Math.floor(slideCollection[0].offsetWidth * 6) + 'px';
 	let count = 0;
-	
-	prev.addEventListener('click', () => {
-		const cloneElem = slideCollection[count].cloneNode(true);
-		prev.before(cloneElem);
-		slideCollection[count].remove();
-		count++;
-		console.log(count);
-		if (count >= slideCollection.length - 1) {
-			count = 0;
-			slideCollection = servicesSlider.querySelectorAll('.slide');
-		}
-	});
+
+	try {
+		prev.addEventListener('click', () => {
+			const cloneElem = slideCollection[count].cloneNode(true);
+			prev.before(cloneElem);
+			slideCollection[count].remove();
+			count++;
+			console.log(count);
+			if (count >= slideCollection.length - 1) {
+				count = 0;
+				slideCollection = servicesSlider.querySelectorAll('.slide');
+			}
+		});
+	} catch (error) {
+		return;
+	}
 
 	let nextCount = 9;
 
 	next.addEventListener('click', () => {
-		const cloneElem = slideCollection[nextCount].cloneNode(true);
+		const cloneElem = slideCollection [nextCount].cloneNode(true);
 		servicesSlider.prepend(cloneElem);
 		slideCollection[nextCount].remove();
 		nextCount--;
