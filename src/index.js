@@ -15,6 +15,7 @@ import showBurgerMenu from './modules/burgerMenu';
 import formValidation from './modules/formValidation';
 import calculator from './modules/calculator';
 import carousel from './modules/carousel';
+import gallerySlider from './modules/gallerySlider';
 import sendFormData from './modules/form';
 
 
@@ -67,4 +68,7 @@ calculator(form4);
 // carousel
 
 carousel();
+
+// slider 
+gallerySlider();
 
