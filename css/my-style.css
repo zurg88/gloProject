@@ -5,6 +5,7 @@ header .head .club-select .clubs-list .show-club-menu {
 .services-slider {
 	position: relative;
 	overflow: hidden;
+	padding-left: 28px;
 }
 
 .services-slider .slide {
@@ -14,9 +15,7 @@ header .head .club-select .clubs-list .show-club-menu {
 
 .slide-container {
 	display: flex;
-    margin: 0 auto;
-    padding-left: 15px;
-	padding-right: 15px;
+	margin: 0 auto;
 	overflow: hidden;
 }
 
