@@ -103,3 +103,14 @@ header .head .club-select .clubs-list .show-club-menu {
 .gallary-dots .dot-active {
     background-color: #ffd200;
 }
+
+#totop {
+	opacity: 0;
+}
+
+.menu-button {
+	background-color: #0d0b15;
+	z-index: 999;
+	padding: 0 10px;
+	border-radius: 3px;
+}

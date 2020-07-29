@@ -16,6 +16,7 @@ import formValidation from './modules/formValidation';
 import calculator from './modules/calculator';
 import carousel from './modules/carousel';
 import gallerySlider from './modules/gallerySlider';
+import scrollFunc from './modules/scroll';
 import sendFormData from './modules/form';
 
 
@@ -69,6 +70,9 @@ calculator(form4);
 
 carousel();
 
-// slider 
+// slider
 gallerySlider();
 
+// Scroll
+
+scrollFunc();
