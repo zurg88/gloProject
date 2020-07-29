@@ -2,7 +2,7 @@ const scrollFunc = () => {
 	window.addEventListener('scroll', () => {
 		const header = document.querySelector('.header-main'),
 			topBtn = document.getElementById('totop'),
-			menuButtn = document.querySelector('.menu-button');
+			topMenu = document.querySelector('.top-menu');
 
 		if (window.pageYOffset  >= header.offsetHeight) {
 			topBtn.style.opacity = '1';
@@ -10,11 +10,10 @@ const scrollFunc = () => {
 			topBtn.style.opacity = '0';
 		}
 
-		if (window.pageYOffset  >= menuButtn.offsetHeight) {
-			menuButtn.style.position = 'fixed';
-			menuButtn.style.right = '30px';
+		if (window.pageYOffset  >= topMenu.offsetHeight) {
+			topMenu.style.position = 'fixed';
 		} else {
-			menuButtn.style.position = 'relative';
+			topMenu.style.position = 'relative';
 
 		}
 
