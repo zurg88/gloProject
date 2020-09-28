@@ -1,5 +1,7 @@
 'use strict';
 
+import '../css/main.css';
+
 import 'nodelist-foreach-polyfill';
 import '@babel/polyfill';
 import elementClothest from 'element-closest';

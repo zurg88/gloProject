@@ -2,25 +2,24 @@ const carousel = () => {
 	const slideContainer = document.querySelector('.slide-container'),
 		servicesSlider = document.querySelector('.services-slider'),
 		prev = servicesSlider.querySelector('.prev'),
-		next = servicesSlider.querySelector('.next'),
-		slide = slideContainer.querySelector('.slide');
+		next = servicesSlider.querySelector('.next');
 
 	try {
-		let sliderWidth = 920;
+		// let sliderWidth = 920;
 
-		if (document.documentElement.clientWidth < 768) {
-			sliderWidth = 600;
-		}
-		
-		if (document.documentElement.clientWidth < 992) {
-			sliderWidth = 760;
-		}
+		// if (document.documentElement.clientWidth < 768) {
+		// 	sliderWidth = 600;
+		// }
 
-		if (document.documentElement.clientWidth < 575) {
-			sliderWidth = 350;
-		}
+		// if (document.documentElement.clientWidth < 992) {
+		// 	sliderWidth = 575;
+		// }
 
-		servicesSlider.style.width = `${sliderWidth}px`;
+		// if (document.documentElement.clientWidth < 575) {
+		// 	sliderWidth = 350;
+		// }
+
+		// servicesSlider.style.width = `${sliderWidth}px`;
 
 		prev.addEventListener('click', () => {
 			const cloneElem = slideContainer.firstElementChild.cloneNode(true);
