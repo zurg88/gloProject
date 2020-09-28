@@ -3044,18 +3044,16 @@
 	clip: auto
 }
 @media only screen and (max-width:1199px) {
-	.services-slider .slider-arrow.prev {
-		left: 25px
-	}
-
-	.services-slider .slider-arrow.next {
-		right: 20px
-	}
-}
-
-@media only screen and (max-width:1199px) {
 	header .top-menu ul li a {
 		padding-left: 30px
+	}
+
+	.services-slider {
+		width: 990px;
+	}
+
+	.services-slider .slide {
+		width: 198px;
 	}
 
 	.head-slider .slider-image {
@@ -3063,6 +3061,15 @@
 		right: 0;
 		width: 49vw
 	}
+
+	.services-slider .slider-arrow.prev {
+		left: 25px
+	}
+
+	.services-slider .slider-arrow.next {
+		right: 20px
+	}
+
 }
 
 @media only screen and (max-width:991px) {
@@ -3166,8 +3173,9 @@
 	}
 
 	.services-slider .slide {
-		width: 190px;
+		width: 181px;
 	}
+
 }
 
 @media only screen and (max-width:880px) {
@@ -3253,14 +3261,21 @@
 		top: 40px
 	}
 
-	#gallery .gallery-slider {
-		padding-left: 10px;
-		padding-right: 10px
+	#gallery .gallery-slider .slide {
+		top: -35px;
 	}
 
-	#gallery .gallery-slider .slider-arrow.next,
-	#gallery .gallery-slider .slider-arrow.prev {
-		display: none !important
+	.gallery-slider #prev, 
+	.gallery-slider #next {
+		top: -40px;
+	}
+
+	.gallery-slider #prev {
+		left: 0;
+	}
+
+	.gallery-slider #next {
+		right: 0;
 	}
 
 	#gallery .gallery-slider .slider-dots {
@@ -3268,6 +3283,10 @@
 		padding-top: 12px;
 		padding-left: 5px;
 		padding-right: 5px
+	}
+
+	.gallary-dots {
+		bottom: -90px;
 	}
 
 	#cards .content {
@@ -3312,6 +3331,12 @@
 		-ms-flex-pack: center;
 		justify-content: center
 	}
+
+	html#mozaika #services,
+	html#schelkovo #services {
+		margin-top: 60px;
+		padding-bottom: 50px
+	}
 }
 
 @media only screen and (max-width:580px) {
@@ -3332,7 +3357,22 @@
 	header .head-main .right .free-visit img {
 		margin-right: 15px
 	}
+
+	.services-slider {
+		width: 475px;
+	}
+	
+	.services-slider .slide {
+		width: 158px;
+	}
+
+	html#mozaika .advantages .wrapper .advantage, 
+	html#schelkovo .advantages .wrapper .advantage {
+		width: 30%;
+		margin: 0;
+	}
 }
+
 
 @media only screen and (max-width:479px) {
 
@@ -3436,12 +3476,54 @@
 	}
 
 	.popup .form-content h4 {
-		width: 90vw
+		width: 90vw;
 	}
 
 	.popup .form-content input[type="text"],
 	.popup .form-content input[type="tel"] {
-		width: 80vw
+		width: 80vw;
+	}
+
+	.services-slider {
+		width: 360px;
+	}
+	
+	.services-slider .slide {
+		width: 110px;
+		padding: 0 5px;
+		margin: 0 2px;
+	}
+
+	.services-slider .slide:first-child {
+		margin-left: 0;
+	}
+
+	.services-slider .slider-arrow {
+		top: 95px;
+	} 
+
+	.services-slider #next,
+	.services-slider #prev {
+		margin-top: 0;
+		width: 25px;
+		height: 25px;
+	}
+
+	.fixed-gift {
+		right: 10px;
+		top: 77px;
+	}
+
+	html#mozaika .advantages .wrapper .advantage, 
+	html#schelkovo .advantages .wrapper .advantage {
+		width: 40%;
+		margin: 10px;
+	}
+
+	html#mozaika .advantage .text, 
+	html#schelkovo .advantage .text {
+		line-height: 15px;
+    	padding-top: 15px;
 	}
 }
 
@@ -3474,6 +3556,18 @@
 
 	.slider-dots {
 		bottom: 30px
+	}
+
+	html#mozaika .advantages .wrapper .advantage, 
+	html#schelkovo .advantages .wrapper .advantage {
+		width: 42%;
+    	margin: 8px;
+	}
+
+	html#mozaika .advantage .text, 
+	html#schelkovo .advantage .text {
+		line-height: 13px;
+    	padding-top: 13px;
 	}
 }
 html,
@@ -3772,7 +3866,6 @@ html#schelkovo .head-slider .wrapper {
 
 html#mozaika .head-slider .slider-image,
 html#schelkovo .head-slider .slider-image {
-	max-width: 474px;
 	left: auto;
 	right: 0
 }
@@ -3995,53 +4088,6 @@ html#schelkovo .advantage .text {
 	padding-top: 17px
 }
 
-html#mozaika #adv-slider,
-html#schelkovo #adv-slider {
-	margin-top: 30px;
-	padding-left: 35px;
-	padding-right: 35px
-}
-
-html#mozaika #adv-slider .advantage:first-child,
-html#schelkovo #adv-slider .advantage:first-child {
-	margin-left: 9px
-}
-
-html#mozaika #adv-slider .advantage:last-child,
-html#schelkovo #adv-slider .advantage:last-child {
-	margin-right: 9px
-}
-
-html#mozaika #adv-slider .slider-arrow,
-html#schelkovo #adv-slider .slider-arrow {
-	position: absolute;
-	top: 75px;
-	margin-top: -18px;
-	z-index: 100;
-	cursor: pointer
-}
-
-html#mozaika #adv-slider .slider-arrow span,
-html#schelkovo #adv-slider .slider-arrow span {
-	display: block;
-	width: 36px;
-	height: 37px;
-	background-color: #f4c71b;
-	border-radius: 50%;
-	text-align: center;
-	padding-top: 11px
-}
-
-html#mozaika #adv-slider .slider-arrow.prev,
-html#schelkovo #adv-slider .slider-arrow.prev {
-	left: 2px
-}
-
-html#mozaika #adv-slider .slider-arrow.next,
-html#schelkovo #adv-slider .slider-arrow.next {
-	right: 2px
-}
-
 html#mozaika #cards .right,
 html#schelkovo #cards .right {
 	-webkit-box-flex: 1;
@@ -4135,6 +4181,7 @@ html#schelkovo #cards #card_order .form-bottom p.submit {
 
 html#mozaika #services,
 html#schelkovo #services {
+	margin-top: 100px;
 	padding-bottom: 50px
 }
 
@@ -4586,7 +4633,7 @@ header .head .call .btn {
 }
 
 header nav.top-menu {
-	z-index: 4444;
+	z-index: 1030;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -5022,9 +5069,8 @@ nav.popup-menu .close-menu-btn img {
 
 .services-slider .slide {
 	text-align: center;
-	margin-right: 6px;
-	margin-left: 6px;
-	width: 210px
+	padding: 0 15px;
+	width: 222px
 }
 
 .services-slider .slide img {
@@ -5083,12 +5129,16 @@ nav.popup-menu .close-menu-btn img {
 	background: url(4cfaa917173d4224583208d70a59e2ea.png) left center no-repeat
 }
 
+#gallery h2 {
+	margin-bottom: 105px;
+}
+
 #gallery .gallery-slider {
 	padding-left: 75px;
 	padding-right: 75px;
 	max-width: 900px;
 	margin: 0 auto;
-	text-align: center
+	text-align: center;
 }
 
 #gallery .gallery-slider .slide {
@@ -5097,9 +5147,6 @@ nav.popup-menu .close-menu-btn img {
 }
 
 #gallery .gallery-slider .slider-arrow {
-	position: absolute;
-	top: 50%;
-	margin-top: -18px;
 	z-index: 100;
 	cursor: pointer
 }
@@ -5565,7 +5612,8 @@ footer .footer-bottom .right .socials .social-icon:hover a {
 	right: 0;
 	z-index: 1200;
 	width: 380px;
-	height: 355px
+	height: 355px;
+	z-index: 1030;
 }
 
 .popup .form-wrapper .close-form {
@@ -5742,15 +5790,9 @@ header .head .club-select .clubs-list .show-club-menu {
 	overflow: hidden;
 }
 
-.services-slider .slide {
-	padding: 0 30px;
-	width: auto;
-}
-
 .slide-container {
 	display: flex;
-	margin: 0 auto;
-	overflow: hidden;
+	justify-content: center;
 }
 
 .gallery-slider,
@@ -5854,18 +5896,16 @@ header .head .club-select .clubs-list .show-club-menu {
 	border-radius: 3px;
 }
 @media only screen and (max-width:1199px) {
-	.services-slider .slider-arrow.prev {
-		left: 25px
-	}
-
-	.services-slider .slider-arrow.next {
-		right: 20px
-	}
-}
-
-@media only screen and (max-width:1199px) {
 	header .top-menu ul li a {
 		padding-left: 30px
+	}
+
+	.services-slider {
+		width: 990px;
+	}
+
+	.services-slider .slide {
+		width: 198px;
 	}
 
 	.head-slider .slider-image {
@@ -5873,6 +5913,15 @@ header .head .club-select .clubs-list .show-club-menu {
 		right: 0;
 		width: 49vw
 	}
+
+	.services-slider .slider-arrow.prev {
+		left: 25px
+	}
+
+	.services-slider .slider-arrow.next {
+		right: 20px
+	}
+
 }
 
 @media only screen and (max-width:991px) {
@@ -5976,8 +6025,9 @@ header .head .club-select .clubs-list .show-club-menu {
 	}
 
 	.services-slider .slide {
-		width: 190px;
+		width: 181px;
 	}
+
 }
 
 @media only screen and (max-width:880px) {
@@ -6063,14 +6113,21 @@ header .head .club-select .clubs-list .show-club-menu {
 		top: 40px
 	}
 
-	#gallery .gallery-slider {
-		padding-left: 10px;
-		padding-right: 10px
+	#gallery .gallery-slider .slide {
+		top: -35px;
 	}
 
-	#gallery .gallery-slider .slider-arrow.next,
-	#gallery .gallery-slider .slider-arrow.prev {
-		display: none !important
+	.gallery-slider #prev, 
+	.gallery-slider #next {
+		top: -40px;
+	}
+
+	.gallery-slider #prev {
+		left: 0;
+	}
+
+	.gallery-slider #next {
+		right: 0;
 	}
 
 	#gallery .gallery-slider .slider-dots {
@@ -6078,6 +6135,10 @@ header .head .club-select .clubs-list .show-club-menu {
 		padding-top: 12px;
 		padding-left: 5px;
 		padding-right: 5px
+	}
+
+	.gallary-dots {
+		bottom: -90px;
 	}
 
 	#cards .content {
@@ -6122,6 +6183,12 @@ header .head .club-select .clubs-list .show-club-menu {
 		-ms-flex-pack: center;
 		justify-content: center
 	}
+
+	html#mozaika #services,
+	html#schelkovo #services {
+		margin-top: 60px;
+		padding-bottom: 50px
+	}
 }
 
 @media only screen and (max-width:580px) {
@@ -6142,7 +6209,22 @@ header .head .club-select .clubs-list .show-club-menu {
 	header .head-main .right .free-visit img {
 		margin-right: 15px
 	}
+
+	.services-slider {
+		width: 475px;
+	}
+	
+	.services-slider .slide {
+		width: 158px;
+	}
+
+	html#mozaika .advantages .wrapper .advantage, 
+	html#schelkovo .advantages .wrapper .advantage {
+		width: 30%;
+		margin: 0;
+	}
 }
+
 
 @media only screen and (max-width:479px) {
 
@@ -6246,12 +6328,54 @@ header .head .club-select .clubs-list .show-club-menu {
 	}
 
 	.popup .form-content h4 {
-		width: 90vw
+		width: 90vw;
 	}
 
 	.popup .form-content input[type="text"],
 	.popup .form-content input[type="tel"] {
-		width: 80vw
+		width: 80vw;
+	}
+
+	.services-slider {
+		width: 360px;
+	}
+	
+	.services-slider .slide {
+		width: 110px;
+		padding: 0 5px;
+		margin: 0 2px;
+	}
+
+	.services-slider .slide:first-child {
+		margin-left: 0;
+	}
+
+	.services-slider .slider-arrow {
+		top: 95px;
+	} 
+
+	.services-slider #next,
+	.services-slider #prev {
+		margin-top: 0;
+		width: 25px;
+		height: 25px;
+	}
+
+	.fixed-gift {
+		right: 10px;
+		top: 77px;
+	}
+
+	html#mozaika .advantages .wrapper .advantage, 
+	html#schelkovo .advantages .wrapper .advantage {
+		width: 40%;
+		margin: 10px;
+	}
+
+	html#mozaika .advantage .text, 
+	html#schelkovo .advantage .text {
+		line-height: 15px;
+    	padding-top: 15px;
 	}
 }
 
@@ -6284,6 +6408,18 @@ header .head .club-select .clubs-list .show-club-menu {
 
 	.slider-dots {
 		bottom: 30px
+	}
+
+	html#mozaika .advantages .wrapper .advantage, 
+	html#schelkovo .advantages .wrapper .advantage {
+		width: 42%;
+    	margin: 8px;
+	}
+
+	html#mozaika .advantage .text, 
+	html#schelkovo .advantage .text {
+		line-height: 13px;
+    	padding-top: 13px;
 	}
 }
 

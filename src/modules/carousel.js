@@ -5,22 +5,6 @@ const carousel = () => {
 		next = servicesSlider.querySelector('.next');
 
 	try {
-		// let sliderWidth = 920;
-
-		// if (document.documentElement.clientWidth < 768) {
-		// 	sliderWidth = 600;
-		// }
-
-		// if (document.documentElement.clientWidth < 992) {
-		// 	sliderWidth = 575;
-		// }
-
-		// if (document.documentElement.clientWidth < 575) {
-		// 	sliderWidth = 350;
-		// }
-
-		// servicesSlider.style.width = `${sliderWidth}px`;
-
 		prev.addEventListener('click', () => {
 			const cloneElem = slideContainer.firstElementChild.cloneNode(true);
 			slideContainer.append(cloneElem);

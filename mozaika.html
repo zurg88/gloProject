@@ -6,10 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Сеть фитнес клубов Тело - Мозаика</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-
-    <link rel="stylesheet" href="css/style.min.css">
-    <link rel="stylesheet" href="css/my-style.css">
+    <link rel="stylesheet" href="dist/main.css">
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 </head>
 <body>
@@ -77,6 +74,9 @@
         </ul>
     </nav>
     <div class="head-slider">
+        <div class="slider-image">
+            <img src="images/head-slider-1.png" alt="">
+        </div>
         <div class="wrapper">
             <div class="main-slider">
                 <div class="slide">
@@ -206,7 +206,7 @@
         </div>
     </div>
 </section>
-<div class="advantages hidden-small" id="table">
+<div class="advantages">
     <div class="wrapper">
         <div class="advantage">
             <div class="image"><img src="images/about-club-icons/icon5.png" alt=""></div>
@@ -238,40 +238,7 @@
         </div>
     </div>
 </div>
-<div class="advantages-slider hidden-large">
-    <div class="wrapper">
-        <div id="adv-slider">
-            <div class="advantage">
-                <div class="image"><img src="images/about-club-icons/icon5.png" alt=""></div>
-                <div class="text">Общая площадь<br> 1500 м2</div>
-            </div>
-            <div class="advantage">
-                <div class="image"><img src="images/about-club-icons/icon6.png" alt=""></div>
-                <div class="text">Тренажерный зал<br> 1000 м2</div>
-            </div>
-            <div class="advantage">
-                <div class="image"><img src="images/about-club-icons/icon7.png" alt=""></div>
-                <div class="text">Груп. программы<br> (2 зала)</div>
-            </div>
-            <div class="advantage">
-                <div class="image"><img src="images/about-club-icons/icon8.png" alt=""></div>
-                <div class="text">СПА Зона</div>
-            </div>
-            <div class="advantage">
-                <div class="image"><img src="images/about-club-icons/icon9.png" alt=""></div>
-                <div class="text">Кроссфит</div>
-            </div>
-            <div class="advantage">
-                <div class="image"><img src="images/about-club-icons/icon10.png" alt=""></div>
-                <div class="text">Фитнес бар</div>
-            </div>
-            <div class="advantage">
-                <div class="image"><img src="images/about-club-icons/icon11.png" alt=""></div>
-                <div class="text">Массажный<br> кабинет</div>
-            </div>
-        </div>
-    </div>
-</div>
+
 <section id="cards">
     <div class="wrapper">
         <h2>выбрать карту</h2>
@@ -325,28 +292,32 @@
     <h2>Фотогалерея</h2>
     <div class="gallery-bg">
         <div class="wrapper">
-            <div class="gallery-slider">
-                <div class="slide active">
-                    <img src="images/gallery/photo1.jpg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="images/gallery/photo2.jpg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="images/gallery/photo3.jpg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="images/gallery/photo4.jpg" alt="">
-                </div>
-                <div class="slide">
-                    <img src="images/gallery/photo5.jpg" alt="">
-                </div>
+            <ul class="gallery-slider">
+                <li class="slide active">
+                    <img src="images/gallery/photo1.jpg" alt="photo1">
+                </li>
+
+                <li class="slide active">
+                    <img src="images/gallery/photo2.jpg" alt="photo2">
+                </li>
+
+                <li class="slide active">
+                    <img src="images/gallery/photo3.jpg" alt="photo3">
+                </li>
+
+                <li class="slide active">
+                    <img src="images/gallery/photo4.jpg" alt="photo4">
+                </li>
+
+                <li class="slide active">
+                    <img src="images/gallery/photo5.jpg" alt="photo5">
+                </li>
 
                 <span class="gallery-arrow" id="prev"></span>
                 <span class="gallery-arrow" id="next"></span>
 
                 <ul class="gallary-dots"></ul>
-            </div>
+            </ul>
         </div>
     </div>
 </section>
@@ -354,65 +325,67 @@
     <div class="wrapper">
         <h2>услуги наших клубов</h2>
         <div class="services-slider">
-            <div class="slide-container">
-                <div class="slide">
+
+            <ul class="slide-container">
+                <li class="slide">
                     <img src="images/services-slider/akva.jpg" alt="Аква территория">
                     <h6>Аква территория</h6>
                     <p>Плавание полезно для людей абсолютно любой возрастной категории. Бассейн 5 на 6 метров.</p>
-                </div>
-                <div class="slide">
+                </li>
+                <li class="slide">
                     <img src="images/services-slider/vesy.jpg" alt="Зона свободных весов">
                     <h6>Зона свободных весов</h6>
                     <p>Здесь есть всё необходимое, чтобы достичь максимальных результатов</p>
-                </div>
-                <div class="slide">
+                </li>
+                <li class="slide">
                     <img src="images/services-slider/TRX.jpg" alt="Зона TRX">
                     <h6>Зона TRX</h6>
                     <p>Укрепление суставов и связок, увеличение мышечной массы, выносливости и гибкости</p>
-                </div>
-                <div class="slide">
+                </li>
+                <li class="slide">
                     <img src="images/services-slider/kardio.jpg" alt="Кардиозона">
                     <h6>Кардиозона</h6>
                     <p>Эффективное снижение веса и улучшение работы сердечно-сосудистой системы</p>
-                </div>
-                <div class="slide">
+                </li>
+                <li class="slide">
                     <img src="images/services-slider/yoga.jpg" alt="Йога">
                     <h6>Йога</h6>
                     <p>Йога - идеальны не только физическая форма, но и эмоциональное состояние</p>
-                </div>
-                <div class="slide">
+                </li>
+                <li class="slide">
                     <img src="images/services-slider/akva.jpg" alt="Аква территория">
                     <h6>Аква территория</h6>
                     <p>Плавание полезно для людей абсолютно любой возрастной категории. Бассейн 5 на 6 метров.</p>
-                </div>
-                <div class="slide">
+                </li>
+                <li class="slide">
                     <img src="images/services-slider/vesy.jpg" alt="Зона свободных весов">
                     <h6>Зона свободных весов</h6>
                     <p>Здесь есть всё необходимое, чтобы достичь максимальных результатов</p>
-                </div>
-                <div class="slide">
+                </li>
+                <li class="slide">
                     <img src="images/services-slider/TRX.jpg" alt="Зона TRX">
                     <h6>Зона TRX</h6>
                     <p>Укрепление суставов и связок, увеличение мышечной массы, выносливости и гибкости</p>
-                </div>
-                <div class="slide">
+                </li>
+                <li class="slide">
                     <img src="images/services-slider/kardio.jpg" alt="Кардиозона">
                     <h6>Кардиозона</h6>
                     <p>Эффективное снижение веса и улучшение работы сердечно-сосудистой системы</p>
-                </div>
-                <div class="slide">
+                </li>
+                <li class="slide">
                     <img src="images/services-slider/yoga.jpg" alt="Йога">
                     <h6>Йога</h6>
                     <p>Йога - идеальны не только физическая форма, но и эмоциональное состояние</p>
-                </div>
-    
-            </div>
+                </li>
+            </ul>
+
             <div class="slider-arrow prev">
-               <span> < </span>
+                <span class="" id="prev"></span>
             </div>
             <div class="slider-arrow next">
-               <span> > </span>
+                <span class="" id="next"></span>
             </div>
+
         </div>
     </div>
 </section>
